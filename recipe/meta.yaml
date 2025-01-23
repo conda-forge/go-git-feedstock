@@ -1,5 +1,5 @@
 {% set name = "go-git" %}
-{% set version = "5.13.1" %}
+{% set version = "5.13.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/go-git/go-git/archive/v{{ version }}.tar.gz
-  sha256: 6b7cfe17da94cc8a3329816d9bed0859813fda29088a090c3de93f7b7b0e2f9c
+  sha256: eb76d52abc95256193e00c335eb4bc999a412c749bd10dac983dd0a4850534bb
 
 build:
   number: 0
