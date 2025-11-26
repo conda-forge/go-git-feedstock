@@ -1,12 +1,14 @@
-{% set name = "go-git" %}
-{% set version = "5.16.4" %}
+schema_version: 1
+
+context:
+  version: 5.16.4
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: go-git
+  version: ${{ version }}
 
 source:
-  url: https://github.com/go-git/go-git/archive/v{{ version }}.tar.gz
+  url: https://github.com/go-git/go-git/archive/v${{ version }}.tar.gz
   sha256: 26cdfed8a961cffde877432022246e6249cb1ee910ecc815515a2c6c45d48377
 
 build:
@@ -14,21 +16,21 @@ build:
 
 requirements:
   build:
-    - {{ compiler('go-nocgo') }}
+    - ${{ compiler('go-nocgo') }}
     - go-licenses
 
-test:
-  commands:
-    - go-git version
+tests:
+  - script:
+      - go-git version
 
 about:
-  home: https://github.com/go-git/go-git
   license: Apache-2.0
   license_file:
     - LICENSE
     - license-files/
   summary: A golang formatter that fixes long lines
-  dev_url: https://github.com/go-git/go-git
+  homepage: https://github.com/go-git/go-git
+  repository: https://github.com/go-git/go-git
 
 extra:
   recipe-maintainers:
