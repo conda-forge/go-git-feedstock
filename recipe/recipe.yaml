@@ -1,7 +1,7 @@
 schema_version: 1
 
 context:
-  version: "5.19.0"
+  version: "5.19.1"
 
 package:
   name: go-git
@@ -9,7 +9,7 @@ package:
 
 source:
   url: https://github.com/go-git/go-git/archive/v${{ version }}.tar.gz
-  sha256: cd1de56c69c3a9ba1e608cce0c35720ba7f714995b62fecdf4272a4c215e5406
+  sha256: 91b44587081b94cee4c379f7eaad28e660384f77c334da57cf53551e7e710596
 
 build:
   number: 0
